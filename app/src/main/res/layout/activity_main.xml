@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.rugvedinamdar.seekbardemo.MainActivity">
+
+    <!--<SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Hello World!" />-->
+    <com.rugvedinamdar.seekbardemo.rangeseekbar.RangeSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        rsb:absoluteMaxValue="5000000"
+        rsb:absoluteMinValue="0"
+        rsb:activateOnDefaultValues="true"
+        rsb:activeColor="#f66161"
+        rsb:barHeight="8dp"
+        rsb:defaultColor="#e6e6e6"
+        rsb:thumbDisabled="@drawable/seek_thumb_red_normal_small_diabled"
+        rsb:thumbNormal="@drawable/seek_thumb_red_normal_small"
+        rsb:thumbPressed="@drawable/seek_thumb_red_normal_small"
+        rsb:showLabels="false"
+        rsb:valuesAboveThumbs="false" />
+
+    <TextView
+        android:id="@+id/tv_range_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tv_range_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="12dp" />
+</RelativeLayout>
